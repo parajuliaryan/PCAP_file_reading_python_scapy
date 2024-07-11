@@ -7,9 +7,12 @@ file_path = "C:/TH OWL/SEM 1/NWS 2024/def_con_23_sample.pcap"
 # packets = rdpcap(file_path)
 packets = sniff(offline=file_path)
 
-#Printing the summary of the packets
-print ("Summary of packets in the pcap file:")
-packets.nsummary()
+def print_summary(packets):
+    #Printing the summary of the packets
+    print ("Summary of packets in the pcap file:")
+    packets.nsummary()
+
+print_summary(packets)
 
 #Trying by accessing the first packet
 first_packet = packets[0]
